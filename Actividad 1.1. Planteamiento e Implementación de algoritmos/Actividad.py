@@ -25,13 +25,13 @@ count = 0
 while i != 99:
     lista.append(i)
     total = total + i
-    count = count + 1
     i = i + 3
 
 total = total + i
-count = count + 1
 lista.append(i)
 
+for i in lista:
+    count = count + 1
 
 prom = total / count
 
