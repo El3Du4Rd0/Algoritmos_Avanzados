@@ -1,3 +1,19 @@
+"""
+Se desea calcular los primeros 15 números de la siguiente sumatoria:
+Suma = 1 + 1/2² + 1/3³ + 1/4² + 1/5⁵ + 1/6² + ...
+"""
+def sumatoria(n):
+    res = 0
+    if n == 1:
+        return 1
+    else:
+        for i in range(1, n + 1):
+            if (i % 2) == 0:
+                res += (1/i**2)
+            else:
+                res += (1/i**i)
+        return res
+
 from random import *
 
 # Se desea calcular el factorial de un número dado por el usuario.
