@@ -28,7 +28,10 @@ while i != 99:
     count = count + 1
     i = i + 3
 
+total = total + i
+count = count + 1
 lista.append(i)
+
 
 prom = total / count
 
