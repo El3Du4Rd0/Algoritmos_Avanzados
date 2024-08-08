@@ -1,4 +1,47 @@
-from random import *
+import random
+import math
+
+#Algoritmo 1
+#un programa que permita saber en cuantos días es posible surtir un pedido de N camisas
+
+linea1 = []
+linea2 = []
+No_camisetas = int(input("Escribe el número de camisetas del pedido: "))
+
+#Crear datos de prueba
+for i in range(5):
+    linea1.append(random.randint(5,20))
+    linea2.append(random.randint(5,20))
+
+#Obtener el proedio de camisetas producidas en un día
+total_linea = linea1 + linea2
+avg_total = 0
+
+for i in total_linea:
+    avg_total += i
+
+avg_total /= len(total_linea)
+
+#Calcular tiempo del pedido
+dias = round(No_camisetas / avg_total)
+
+print("\nEl pedido tomará aproximadamente " + str(dias) + " días en producirse\n")
+
+#Algoritmo 2
+#Saber cuántos refrescos puede llenar la máquina de una sola vez, sin recargar el contenedor.
+#Solo se tienen los datos del radio de la base y la altura medidos en metros. 
+
+radio = int(input("Escribe el radio del contenedor de la embotelladora (m): "))
+altura = int(input("Escribe la altura del contenedor de la embotelladora (m): "))
+mililitros = int(input("Escribe el contenido en mililitros de cada botella: "))
+
+#En mililitros
+volumen = (math.pi * (radio**2)) * 1000000
+
+botellas = math.floor(volumen/mililitros)
+
+print("\nLa embotelladora puede embotellar " + str(botellas) + " botellas con un solo tanque")
+
 
 '''
 3. Que solicite un número que indica cuántos números aleatorios (positivos y
@@ -10,7 +53,7 @@ num_infer = int(input())
 print("Ingresa el numero superior: ")
 num_super = int(input())
 
-random_num = randint(num_infer, num_super)
+random_num = random.randint(num_infer, num_super)
 print(random_num)
 
 
