@@ -2,7 +2,7 @@
 Equipo 7:
     Juan Eduardo Rosas Cerón - A01710168
     Juan Carlos Calderón García - A01625696
-    Pablo
+    Pablo Hazael Hurtado Mireles - A01710778
 
 Actividad 1.3: Aplicaciones de la técnica de programación "divide y vencerás"
 
