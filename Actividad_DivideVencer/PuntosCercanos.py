@@ -15,7 +15,6 @@ from math import sqrt
 # Constantes
 PUNTOS = [(1,2), (2,3), (3,4), (4,5), (5,6), (6,7), (7,8), (8,9), (9,0), (0,0)]
 ORDEN_X = sorted(PUNTOS, key=lambda p: p[0])
-ORDEN_Y = sorted(PUNTOS, key=lambda p: p[1])
 
 # Funcion para obtener la distancia entre dos puntos
 def distancia(punto1, punto2):
