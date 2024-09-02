@@ -16,6 +16,7 @@ denominacion_Moneda.sort(reverse=True)
 precio = int(input("Precio: "))
 pago = int(input("Pago: "))
 cambio = pago - precio
+res_cambio = cambio
 
 
 # Inicializamos una tabla de DP con infinito
@@ -42,4 +43,4 @@ while cambio > 0:
 
     
 
-print(f"\nTu cambio es de: {cambio} \nCon denominacion de {denominacion_Moneda} \ncon estas monedas   {resultado} ")
+print(f"\nTu cambio es de: {res_cambio} \nCon denominacion de {denominacion_Moneda} \ncon estas monedas   {resultado} ")
