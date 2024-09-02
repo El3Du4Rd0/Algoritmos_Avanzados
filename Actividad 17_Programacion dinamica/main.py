@@ -16,21 +16,30 @@ denominacion_Moneda.sort(reverse=True)
 precio = int(input("Precio: "))
 pago = int(input("Pago: "))
 cambio = pago - precio
-suma = 0
-i = 0
 
-for j in denominacion_Moneda:
-    cambio_Moneda.append(0)
 
-copia_denominacion_Moneda = denominacion_Moneda.copy()
+# Inicializamos una tabla de DP con infinito
+dp = [float('inf')] * (cambio + 1)
+dp[0] = 0  # No se necesita ninguna moneda para hacer un total de 0
 
-while suma <= cambio and copia_denominacion_Moneda:
-    if(suma + copia_denominacion_Moneda[0] <= cambio):
-        suma += copia_denominacion_Moneda[0]
-        cambio_Moneda[i] += 1
-    else:
-        i += 1
-        copia_denominacion_Moneda.pop(0)
-        
+# Tabla para almacenar la combinación de monedas utilizada
+monedas_usadas = [-1] * (cambio + 1)
 
-print(f"\nTu cambio es de: {cambio} \nCon denominacion de {denominacion_Moneda} \ncon estas monedas   {cambio_Moneda} ")
+# Llenamos la tabla DP
+for i in range(1, cambio + 1):
+    for j in range(len(denominacion_Moneda)):
+        if denominacion_Moneda[j] <= i:
+            if dp[i - denominacion_Moneda[j]] + 1 < dp[i]:
+                dp[i] = dp[i - denominacion_Moneda[j]] + 1
+                monedas_usadas[i] = j
+
+# Reconstruimos la solución
+resultado = [0] * len(denominacion_Moneda)
+while cambio > 0:
+    moneda = monedas_usadas[cambio]
+    resultado[moneda] += 1
+    cambio -= denominacion_Moneda[moneda]
+
+    
+
+print(f"\nTu cambio es de: {cambio} \nCon denominacion de {denominacion_Moneda} \ncon estas monedas   {resultado} ")
