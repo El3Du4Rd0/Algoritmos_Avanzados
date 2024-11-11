@@ -1,0 +1,10 @@
+1.- Arcos para cablear colonias: 
+(0, 1), (1, 2), (2, 3)
+
+2.- La ruta de ciudades es: [0, 1, 2, 3, 0]
+Con una distancia de 73
+
+3.- El flujo máximo de la red es de: 78
+
+4.- Central más cercana con respecto a (325, 200): (300, 100)
+Con una distancia de: 103.07764064044152
