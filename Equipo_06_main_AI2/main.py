@@ -1,7 +1,7 @@
 """
 Juan Carlos Calderon García         A01625696
 Juan Eduardo Rosas Cerón            A01710168
-Juan Pablo Hurtado Mireles          A01710778
+Pablo Hazael Hurtado Mireles          A01710778
 """
 
 from pathlib import Path
